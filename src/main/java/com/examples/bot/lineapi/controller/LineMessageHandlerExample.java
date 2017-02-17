@@ -28,7 +28,7 @@ public class LineMessageHandlerExample {
 	
 	@EventMapping
 	public void handleTextMessageEvent(MessageEvent<TextMessageContent> event) {
-		replyText(event.getReplyToken(), "받은 메세지는 > "+ event.getMessage().getText());
+		replyText(event.getReplyToken(), "received! > "+ event.getMessage().getText());
 	}
 	
 	private void replyText(@NonNull String replyToken, @NonNull String message) {
