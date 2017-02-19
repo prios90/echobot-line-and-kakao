@@ -1,33 +1,11 @@
 package com.examples.bot.kakao.message;
 
-public class RequestFromKakao {
-
-	private String user_key;
-	private String type;
-	private String content;
-
-	public String getUser_key() {
-		return user_key;
-	}
-
-	public void setUser_key(String user_key) {
-		this.user_key = user_key;
-	}
-
-	public String getType() {
-		return type;
-	}
-
-	public void setType(String type) {
-		this.type = type;
-	}
-
-	public String getContent() {
-		return content;
-	}
-
-	public void setContent(String content) {
-		this.content = content;
-	}
-
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+@NoArgsConstructor
+public @Data class RequestFromKakao {
+	@NonNull private String user_key;
+	@NonNull private String type;
+	@NonNull private String content;
 }

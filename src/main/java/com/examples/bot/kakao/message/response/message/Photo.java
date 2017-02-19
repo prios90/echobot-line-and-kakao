@@ -1,24 +1,19 @@
 package com.examples.bot.kakao.message.response.message;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NonNull;
 
-public class Photo {
-
-	private String url;
+@AllArgsConstructor
+public @Data class Photo {
+	@NonNull private final String url;
 	private int width;
 	private int height;
-
+	
 	public Photo(String url) {
 		super();
 		this.url = url;
-		this.width = 720;
-		this.height = 630;
+		width = 720;
+		height = 630;
 	}
-
-	public Photo(String url, int width, int height) {
-		super();
-		this.url = url;
-		this.width = width;
-		this.height = height;
-	}
-
 }

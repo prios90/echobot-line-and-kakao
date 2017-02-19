@@ -2,11 +2,13 @@ package com.examples.bot.kakao.message;
 
 import com.examples.bot.kakao.message.response.keyboard.Keyboard;
 import com.examples.bot.kakao.message.response.message.Message;
-
+import lombok.Getter;
+import lombok.ToString;
+@ToString
 public class ResponseToKakao {
 
-	private Message message;
-	private Keyboard keyboard;
+	@Getter private Message message;
+	@Getter private Keyboard keyboard;
 
 	public ResponseToKakao(Message message) {
 		super();
@@ -17,13 +19,5 @@ public class ResponseToKakao {
 		super();
 		this.message = message;
 		this.keyboard = keyboard;
-	}
-
-	public Message getMessage() {
-		return message;
-	}
-
-	public Keyboard getKeyboard() {
-		return keyboard;
 	}
 }

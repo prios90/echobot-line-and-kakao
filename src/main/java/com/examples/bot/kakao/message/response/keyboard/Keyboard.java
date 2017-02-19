@@ -1,11 +1,18 @@
 package com.examples.bot.kakao.message.response.keyboard;
 
 import java.util.List;
+import lombok.Getter;
 
 public class Keyboard {
 
+	@Getter
 	private KeyboardType type;
+	@Getter
 	private List<String> buttons;
+	
+	public enum KeyboardType {
+		buttons, text
+	}
 
 	/**
 	 * Force user to give keyboard(String) Input
@@ -25,13 +32,5 @@ public class Keyboard {
 		super();
 		this.type = KeyboardType.buttons;
 		this.buttons = buttons;
-	}
-
-	public KeyboardType getType() {
-		return type;
-	}
-
-	public List<String> getButtons() {
-		return buttons;
 	}
 }
